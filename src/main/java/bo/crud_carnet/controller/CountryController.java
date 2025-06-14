@@ -1,15 +1,11 @@
 package bo.crud_carnet.controller;
 
 import bo.crud_carnet.domain.Country;
-import bo.crud_carnet.exception.CityNotFoundException;
 import bo.crud_carnet.exception.CountryNotFoundException;
-import bo.crud_carnet.exception.UserNotFoundException;
 import bo.crud_carnet.service.ICountryService;
 import bo.crud_carnet.shared.JsonResult;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

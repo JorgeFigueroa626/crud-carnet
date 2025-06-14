@@ -1,9 +1,7 @@
 package bo.crud_carnet.controller;
 
 import bo.crud_carnet.domain.City;
-import bo.crud_carnet.domain.Country;
 import bo.crud_carnet.exception.CityNotFoundException;
-import bo.crud_carnet.exception.CountryNotFoundException;
 import bo.crud_carnet.service.ICityService;
 import bo.crud_carnet.shared.JsonResult;
 import jakarta.validation.Valid;

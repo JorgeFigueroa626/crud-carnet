@@ -2,8 +2,7 @@ package bo.crud_carnet.service;
 
 import bo.crud_carnet.domain.Country;
 import bo.crud_carnet.exception.CountryNotFoundException;
-import bo.crud_carnet.repository.ICountryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 import java.util.List;
 

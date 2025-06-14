@@ -2,8 +2,7 @@ package bo.crud_carnet.service;
 
 import bo.crud_carnet.domain.City;
 import bo.crud_carnet.exception.CityNotFoundException;
-import bo.crud_carnet.repository.ICityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 import java.util.List;
 

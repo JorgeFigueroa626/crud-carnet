@@ -1,0 +1,41 @@
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_database
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - "3307:3306"
+    networks:
+      - spring-network
+    volumes:
+      - mysql-volume:/var/lib/mysql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-my-app
+    ports:
+      - "8085:8091"
+    environment:
+      DB_HOST: mysql_database
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - spring-network
+    depends_on:
+      - mysql
+
+networks:
+  spring-network:
+
+volumes:
+  mysql-volume:
